@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+
+class nik {
+private:
+    int salary;
+
+public:
+    string name;
+    string dept;
+
+    void put(string name, string dept) {
+        this->name = name;
+        this->dept = dept;
+    }
+
+    int getsalary(int s) {
+        salary = s;
+        return salary;
+    }
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Department: " << dept << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main() {
+    nik s;
+    s.put("Rohan", "Assistant");
+    
+    // Set salary
+    int sal = s.getsalary(50000);
+
+    // Print details
+    cout << s.name << " " << s.dept << endl;
+    cout << "Salary: " << sal << endl;
+
+    // Or you can use:
+    // s.display();
+
+    return 0;
+}
