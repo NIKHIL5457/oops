@@ -1,0 +1,74 @@
+#include<iostream>
+using namespace std;
+
+class nik {
+private:
+
+public:
+    int salary;
+    string name;
+    string dept;
+    
+    //non parameterized
+    nik(){
+        cout<<"constructer called";
+        name="nikhil";
+        dept="Asd";
+    }
+    //parameterized
+    nik(string name,string dept,int salary){
+        this->name=name;
+        this->dept=dept;
+        this->salary=salary;
+    }
+    //copy constructor
+};
+
+int main() {
+    nik s("ok","ok",34);
+    cout<<s.dept;
+    cout<<s.name;
+    nik s2(s);// default copy constructor called 
+    cout<<s2.salary;
+    
+}
+//================copy constructor shallow and deep copy============================
+
+#include<iostream>
+using namespace std;
+
+class student {
+    public:
+    string name;
+    double* cgpap;
+    student(string name,double cgpa){
+        this->name=name;
+        cgpap=new double;
+        *cgpap=cgpa;
+    }
+    // student(student &obj){
+    //     this->name=name;
+    //     cgpap=new double;
+    //     *cgpap=*obj.cgpap;
+    // }
+    // student(student &obj){
+    //     this->name=obj.name;
+    //     this->cgpap=obj.cgpap;
+    // }
+    void get(){
+        cout<<name<<" "<<*cgpap;
+    }
+};
+
+int main() {
+  student s("niikh",23);
+  student s2(s);
+  s.get();
+  *(s2.cgpap)=9.2;
+  s2.get();
+  s.get();
+
+ 
+    
+}
+
