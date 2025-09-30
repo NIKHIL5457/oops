@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student{
+    public:
+    string name;
+    int age;
+    student(string  name,int age){
+        this->name=name;
+        this->age=age;
+    }
+};
+class substudent:public student{
+    public:
+    int work;
+    substudent(string name,int age,int work):student(name,age) {
+        this->work=work;
+         cout<<name;
+        cout<<age;
+        cout<<work;
+    }
+};
+int main()
+{
+    substudent s("asd",324,4);
+
+    
+}
