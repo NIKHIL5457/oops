@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class student{
+    public:
+    string name;
+    int age;
+    void stud(string  name,int age){
+        this->name=name;
+        this->age=age;
+    }
+};
+class substudent:public student{
+    public:
+    int work;
+    void stud1(int work){
+        this->work=work;
+    }
+    
+};
+class subsubstudent:public substudent{
+    public:
+    int answer;
+    void student(int answer){
+        this->answer=an swer;
+        cout<<name;
+        cout<<age;
+        cout<<work;
+        cout<<answer;
+    }
+};
+int main()
+{
+    subsubstudent s;
+    s.stud("nihkil ",23);
+    s.stud1(24);
+    s.student(4);
+
+    
+}
