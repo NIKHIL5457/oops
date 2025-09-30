@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student{
+    public:
+    int age;
+};
+class student2{
+    public:
+    int salary;
+    
+};
+class final:public student,public student2{
+    public:
+    string name;
+};
+int main()
+{
+    final s;
+    s.age=23;
+    s.salary=34;
+    s.name="nikhil";
+    cout<<s.age;
+    cout<<s.salary;
+    cout<<s.name;
+
+    
+}
