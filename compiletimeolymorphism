@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+//constructor overloading and function overlaoding and operator overloading is an example of compile time polymorphism
+//in fo we char datatype using only one paramerter like int char 
+class student{
+    public:
+    string name;
+    student(){
+        cout<<"non parameterized constructor";
+    }
+    student(string name){
+        this->name=name;
+        cout<<"parameterized constructor";
+    }
+};
+
+int main()
+{
+  
+    student s;
+
+    
+}
